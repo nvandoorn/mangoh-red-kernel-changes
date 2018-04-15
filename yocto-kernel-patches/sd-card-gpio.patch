@@ -1,0 +1,14 @@
+diff --git a/arch/arm/mach-msm/board-9615-storage.c b/arch/arm/mach-msm/board-9615-storage.c
+index 1c6f951..64d4329 100644
+--- a/arch/arm/mach-msm/board-9615-storage.c
++++ b/arch/arm/mach-msm/board-9615-storage.c
+@@ -27,7 +27,8 @@
+ #if (defined(CONFIG_MMC_MSM_SDC1_SUPPORT) \
+ 		|| defined(CONFIG_MMC_MSM_SDC2_SUPPORT))
+ 
+-#define GPIO_SDC1_HW_DET	80
++// #define GPIO_SDC1_HW_DET	80
++#define GPIO_SDC1_HW_DET	49
+ #define GPIO_SDC2_DAT1_WAKEUP	26
+ 
+ /* MDM9x15 has 2 SDCC controllers */

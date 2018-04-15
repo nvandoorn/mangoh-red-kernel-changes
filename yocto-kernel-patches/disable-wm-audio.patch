@@ -1,0 +1,25 @@
+diff --git a/arch/arm/mach-msm/board-9615.c b/arch/arm/mach-msm/board-9615.c
+index 80c4272c60e..61031eb2e37 100644
+--- a/arch/arm/mach-msm/board-9615.c
++++ b/arch/arm/mach-msm/board-9615.c
+@@ -1519,20 +1519,6 @@ static void __init msm9615_i2c_init(void)
+ 					&msm9615_i2c_qup_gsbi5_pdata;
+ #endif  /* CONFIG_SIERRA */
+ 
+-#ifdef CONFIG_MFD_WM8944
+-	if(bssupport(BSFEATURE_WM8944) == true)
+-	{
+-		for (i = 0; i < ARRAY_SIZE(msm9615_i2c_devices_wm8944); ++i) {
+-			if (msm9615_i2c_devices_wm8944[i].machs & mach_mask) {
+-				i2c_register_board_info(
+-					msm9615_i2c_devices_wm8944[i].bus,
+-					msm9615_i2c_devices_wm8944[i].info,
+-					msm9615_i2c_devices_wm8944[i].len);
+-				}
+-		}
+-	}
+-	else
+-#endif
+ 	{
+ 		for (i = 0; i < ARRAY_SIZE(msm9615_i2c_devices); ++i) {
+ 			if (msm9615_i2c_devices[i].machs & mach_mask) {
